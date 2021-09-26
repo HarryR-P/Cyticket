@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">RobbieExperiments</string>
+    <string name="title_activity_tabbed">TabbedActivity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="label_buy">Buyer</string>
+    <string name="label_message">Message</string>
+
+</resources>

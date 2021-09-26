@@ -1,0 +1,7 @@
+com.example.cyticketclient.UI
+com.example.cyticketclient.app
+com.example.cyticketclient.data
+com.example.cyticketclient.interfaces
+com.example.cyticketclient.logic
+com.example.cyticketclient.net_utils
+com.example.cyticketclient.networking

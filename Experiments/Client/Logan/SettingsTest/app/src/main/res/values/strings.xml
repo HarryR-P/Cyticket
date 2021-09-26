@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Settings</string>
+    <!-- Settings Activity Title -->
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Posts</string>
+    <string name="sync_header">Notifications</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Allow notifications</string>
+    <string name="attachment_title">Notify me if a buyer is interested</string>
+    <string name="attachment_summary_on">Automatically sends a notification if someone is interested in your post
+    </string>
+    <string name="attachment_summary_off">Automatically sends a notification if someone is interested in your post</string>
+</resources>

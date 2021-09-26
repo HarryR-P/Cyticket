@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_forum">
+
+    <fragment
+        android:id="@+id/navigation_sales"
+        android:name="com.example.cyticketclient.UI.SalesFragment"
+        android:label="Sales"
+        tools:layout="@layout/fragment_sales" />
+
+    <fragment
+        android:id="@+id/navigation_messages"
+        android:name="com.example.cyticketclient.UI.MessagesFragment"
+        android:label="Messages"
+        tools:layout="@layout/fragment_messages" />
+
+    <fragment
+        android:id="@+id/navigation_forum"
+        android:name="com.example.cyticketclient.UI.ForumFragment"
+        android:label="Forum"
+        tools:layout="@layout/fragment_forum" />
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.cyticketclient.UI.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+</navigation>

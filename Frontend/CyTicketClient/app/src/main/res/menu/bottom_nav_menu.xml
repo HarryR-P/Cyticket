@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_sales"
+        android:icon="@drawable/ic_baseline_monetization_on_24"
+        android:title="Sales" />
+
+    <item
+        android:id="@+id/navigation_messages"
+        android:icon="@drawable/ic_baseline_message_24"
+        android:title="Messages" />
+
+    <item
+        android:id="@+id/navigation_forum"
+        android:icon="@drawable/ic_baseline_forum_24"
+        android:title="Forum" />
+
+    <item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/ic_baseline_account_circle_24"
+        android:title="Profile" />
+
+</menu>

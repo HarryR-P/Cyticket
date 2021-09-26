@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CyTicket</string>
+    <string name="tab_text_1">Forum</string>
+    <string name="tab_text_2">Profile</string>
+</resources>

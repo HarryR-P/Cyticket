@@ -1,0 +1,75 @@
+stages:
+  - mavenbuild
+  - maventest
+  - autodeploy
+  - androidbuild
+  - androidtest
+
+maven-build:
+  stage: mavenbuild
+  tags:
+    - BACKEND
+  script:
+    - cd Backend/CyTicketServer/CyTicketServer
+    - mvn package -B
+  only:
+    refs:
+      - master
+
+maven-test:
+  stage: maventest
+  tags:
+    - BACKEND
+  script:
+    - cd Backend/CyTicketServer/CyTicketServer
+    - mvn test
+  artifacts:
+    paths:
+      - Backend/CyTicketServer/CyTicketServer/target/*.jar
+  only:
+    refs:
+      - master
+
+autoDeploy:
+  stage: autodeploy
+  tags:
+    - BACKEND
+  script:
+    - cd Backend/CyTicketServer/CyTicketServer
+    - mvn package
+    - sudo mv target/*.jar /target/CyTicket.jar
+    - sudo systemctl stop web-demo
+    - sudo systemctl start web-demo
+    
+android-build:
+  image: javiersantos/android-ci:latest
+  stage: androidbuild
+  before_script:
+        - export GRADLE_USER_HOME='pwd'/.gradle
+        - chmod +x ./Frontend/CyTicketClient/gradlew
+  tags:
+    - FRONTEND
+  script:
+    - cd Frontend/CyTicketClient
+    - ./gradlew assemble
+  artifacts:
+      paths:
+        - Frontend/CyTicketClient/app/biuld/outputs/
+  only:
+     refs:
+        - master
+        
+unitTests:
+  image: javiersantos/android-ci:latest
+  stage: androidtest
+  before_script:
+    - export GRADLE_USER_HOME='pwd'/.gradle
+    - chmod +x ./Frontend/CyTicketClient/gradlew
+  tags:
+    - FRONTEND
+  script:
+    - cd Frontend/CyTicketClient
+    - ./gradlew test
+  only:
+     refs:
+        - master
